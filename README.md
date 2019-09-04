@@ -1,3 +1,24 @@
+# Demo: Build localhost certificate
+1. build cert
+```sh
+cd easyrsa3
+./build-localhost-cert.sh # <-- folder pki will be remove!
+                          # <-- enter your CA name
+```
+2. add cert to web browser
+```
+Add ./pki/ca.crt to Chrome Trusted Root Certification Authorities
+```
+
+3. start webserver
+```
+python3 webserver.py
+```
+4. https ready
+```
+https://localhost:5000
+```
+
 # Overview
 
 easy-rsa is a CLI utility to build and manage a PKI CA. In laymen's terms,
